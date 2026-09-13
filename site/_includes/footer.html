@@ -1,0 +1,60 @@
+<section class="cta-banner">
+  <div class="container">
+    <h2>Talk to our team before you decide anything</h2>
+    <p style="max-width:56ch;margin:0 auto 24px;color:#C6CFE6;">A short call is enough to tell you whether a notice needs a reply, a return needs correcting, or a loan file needs a project report. No obligation.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="{{ '/contact.html' | relative_url }}">Book a Consultation</a>
+      <a class="btn btn-outline" href="https://wa.me/{{ site.whatsapp }}">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="brand-col">
+        <img src="{{ '/assets/img/logo-horizontal-white.png' | relative_url }}" alt="{{ site.firm_name }}">
+        <p style="color:#9FADCB;font-size:0.9rem;">{{ site.firm_tagline }} — Income Tax, GST, Accounting, Compliance and Bank Loan Project Reports, for clients across {{ site.office_state }}.</p>
+      </div>
+      <div>
+        <h4>Practice Areas</h4>
+        <ul>
+          <li><a href="{{ '/services/income-tax.html' | relative_url }}">Income Tax</a></li>
+          <li><a href="{{ '/services/gst.html' | relative_url }}">GST</a></li>
+          <li><a href="{{ '/services/accounting-bookkeeping.html' | relative_url }}">Accounting &amp; Bookkeeping</a></li>
+          <li><a href="{{ '/services/other-compliances.html' | relative_url }}">ROC &amp; Other Compliances</a></li>
+          <li><a href="{{ '/services/loan-project-reports.html' | relative_url }}">Loan &amp; Project Reports</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>{{ site.office_state }}</h4>
+        <ul>
+          {% assign shown_towns = site.data.towns | slice: 0, 6 %}
+          {% for town in shown_towns %}
+          <li><a href="{{ town.url | relative_url }}">{{ town.name }}</a></li>
+          {% endfor %}
+          <li><a href="{{ '/#where-we-serve' | relative_url }}">View all towns →</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>{{ site.office_city }}, {{ site.office_district }}, {{ site.office_state }}</li>
+          <li><a href="tel:{{ site.phone_tel }}">{{ site.phone }}</a></li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="keyword-strip">
+      <span class="keyword-label">Related services</span>
+      <p>Tax Return · Income Tax Return · ITR · Income Tax Appeals · Income Tax Notice · GST Returns · GST Refunds · GST Litigation · GST Notice · GST Appeals · GST Registration · Compliance · Auditor · Audit · Tax Audit · Form 3CD · Chartered Accountant · CA · Professional · Book Keeping · Projections · Bank Loan Support · Payroll Processing · Networth Certificate · Visa Certificate · Solvency Certificate · Financial Planning · Business Advisory · Company Incorporation · ERP Implementation</p>
+    </div>
+    <div class="foot-bottom">
+      <span>© {{ 'now' | date: "%Y" }} {{ site.firm_name }}. All rights reserved.</span>
+      <span>This site provides general information and does not constitute tax or legal advice. <a href="{{ '/contact.html' | relative_url }}">Speak to us</a> before acting on anything here.</span>
+    </div>
+    <div class="foot-bottom" style="border-top:none;padding-top:0;">
+      <span>{{ site.firm_name }} is a private tax consultancy and is not affiliated with, endorsed by, or a website of, the Government of India, the Government of Andhra Pradesh, or any government department.</span>
+    </div>
+  </div>
+</footer>
